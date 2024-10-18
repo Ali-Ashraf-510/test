@@ -1,0 +1,23 @@
+<table class="table w-50 mx-auto" *ngIf="studentinAbout.length > 0">
+    <thead>
+        <th>index</th>
+        <th>name</th>
+        <th>age</th>
+        <th>id</th>
+    </thead>
+    <tbody>
+        <tr  *ngFor="let student1 of studentinAbout
+        let index= index ">
+            <td>{{index}}</td>
+            <td>{{student1.name}} </td>
+            <td>{{student1.age}}</td>
+            <td>{{student1.id}}</td>
+        </tr>
+    </tbody>
+
+</table>
+
+
+<!-- let index = index to create index number  -->
+
+<!-- ngIf or ngFor from common module  -->

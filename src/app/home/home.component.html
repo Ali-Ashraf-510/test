@@ -1,0 +1,91 @@
+<h1>Hello to my website</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero earum vero temporibus facere voluptatibus cumque.</p>
+
+<!-- <img src="../../assests/images/ali.jpg" alt=""> -->
+<!-- -------------------------------------------------- -->
+<!-- mvc  model view controler-->  
+
+<!-- bindeing btween type script , html 
+
+1- data interploation
+    <h2>my fname is {{fname}}</h2>
+
+2- proberty binding 
+    <img [src]="imgsrc" alt="">
+
+3-event binding
+    <button class="btn btn-danger" (click)="test()"> click me </button>
+
+
+4-class binding 
+    <h3 [class.bg-danger]="check">test class binding</h3>
+
+5-tyle binding
+    <h4 [style.color] = "check?'green':'red'">test style binding</h4>
+
+--------------------------------- 
+two way bindig
+    <input type="text" name="twb" id="twb" [(ngModel)] = "student.name">
+-->
+
+<!-- -------------------------------------------------- -->
+ <!-- 
+    directive
+
+ -->
+<ul>
+    <li>my name is {{student.name}}</li>
+    <li>my id is {{student.id}}</li>
+    <li>my age is {{student.age}}</li>
+</ul>
+
+<!-- <img [src]="imgsrc" alt=""> -->
+
+<br>
+<button class="btn btn-danger" (click)="test()"> click me </button>
+
+<!-- <h3 [class.bg-danger]="check">test class binding</h3> -->
+
+<h4 [style.color] = "check?'green':'red'">test style binding</h4>
+
+
+<a href="lorem">lorem</a>
+<br>
+<br>
+
+
+<h4>two way bindig</h4>
+
+<input type="text" name="twb" id="twb" [(ngModel)] = "student.name">
+
+<button class="btn btn-info" (click)="changeBackground()">change color</button>
+<p [class]="check?'bg-danger':'bg-info'" id="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dicta qui molestias labore iusto perferendis aperiam iste. Similique nulla quibusdam, nisi eos unde labore nostrum mollitia, perspiciatis facilis eius suscipit.</p>
+
+<ul >
+    <li *ngFor="let name of names" >{{name}}</li>
+</ul>
+
+
+<table class="table w-50 mx-auto" *ngIf="sstudents.length > 0 else testt">
+    <thead>
+        <th>index</th>
+        <th>name</th>
+        <th>age</th>
+        <th>id</th>
+    </thead>
+    <tbody>
+        <tr  *ngFor="let student1 of sstudents
+        let index= index ">
+            <td>{{index}}</td>
+            <td>{{student1.name}} </td>
+            <td>{{student1.age}}</td>
+            <td>{{student1.id}}</td>
+        </tr>
+    </tbody>
+
+</table>
+
+<ng-template #testt>
+    no data is here
+</ng-template>
+
